@@ -4,7 +4,7 @@
 int main()
 {
 	int i,n;
-	double lambda;
+	double lambda,u,U;
 	printf("Enter No of Sample to be generated: ");
 	scanf("%d",&n);
 	printf("Enter lembda value: ");
@@ -14,8 +14,8 @@ int main()
 	else
 	{
 		for(i=0;i<n;i++)
-		{double u=rand()/(double)RAND_MAX   ;
-		double U=-log(u)/lambda;
+		{u=rand()/(double)RAND_MAX   ;
+		 U=-log(u)/lambda;
 			printf("%.3f ",U);
 		}
 	}
