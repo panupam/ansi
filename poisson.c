@@ -1,3 +1,9 @@
+/*
+Pranav Kumar Anupam
+2019/14/059
+Practical # 
+
+*/
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>

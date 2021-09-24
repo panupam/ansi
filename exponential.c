@@ -1,10 +1,16 @@
+/*
+Pranav Kumar Anupam
+2019/14/059
+Practical # 
+
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 int main()
 {
 	int i,n;
-	double lambda,u,U;
+	double lambda,exp;
 	printf("Enter No of Sample to be generated: ");
 	scanf("%d",&n);
 	printf("Enter lembda value: ");
@@ -13,10 +19,13 @@ int main()
 	printf("Error! only positive value of lembda is acceptable\n");
 	else
 	{
+		printf("\n%d sample of exponential distribution with parameter %.3lf are\n",n,lambda);
 		for(i=0;i<n;i++)
-		{u=rand()/(double)RAND_MAX   ;
-		 U=-log(u)/lambda;
-			printf("%.3f ",U);
+		{
+		 exp=-log(rand()/(double)RAND_MAX )/lambda; 
+		 /*-log X /lambda where x is uniform distribution 
+		 is exponetial distribution with parameter lambda */
+			printf("%.4lf ",exp);
 		}
 	}
 	return 0;
