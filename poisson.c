@@ -1,7 +1,8 @@
 /*
 Pranav Kumar Anupam
 2019/14/059
-Practical # 
+Practical #16
+Generating random sample of poission distribution
 
 */
 #include<stdio.h>
@@ -9,6 +10,25 @@ Practical #
 #include<stdlib.h>
 int main()
 {
-	printf("%f ",log(rand()/(float)RAND_MAX));
+	int n,i,k;
+	float p,l,u,mu;
+	printf("Enter no of sample to be generated: " );
+	scanf("%d", &n);
+	printf("Enter mu of poission distribution: ");
+	scanf("%f",&mu );
+	l=exp(-mu);
+	for(i=0;i<n;i++)
+	{
+		k=0;
+		p=1;
+
+		do {
+			k++;
+			u=rand()/(float)RAND_MAX;
+			p=p*u;
+
+		} while(p>L);
+		printf("%d ",k-1));
+	}
 	return 0;
 }

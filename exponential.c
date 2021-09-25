@@ -1,8 +1,8 @@
 /*
 Pranav Kumar Anupam
 2019/14/059
-Practical # 
-
+Practical # 10
+Printing N random Sample of exponential distribution. 
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -22,8 +22,8 @@ int main()
 		printf("\n%d sample of exponential distribution with parameter %.3lf are\n",n,lambda);
 		for(i=0;i<n;i++)
 		{
-		 exp=-log(rand()/(double)RAND_MAX )/lambda; 
-		 /*-log X /lambda where x is uniform distribution 
+		 exp=-log(rand()/(double)RAND_MAX )/lambda;
+		 /*-log X /lambda where x is uniform distribution
 		 is exponetial distribution with parameter lambda */
 			printf("%.4lf ",exp);
 		}

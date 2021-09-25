@@ -1,7 +1,8 @@
 /*
 Pranav Kumar Anupam
 2019/14/059
-Practical # 
+Practical # 11
+Printing N random sample of Gamma distribution where alpha is integer.
 
 */
 #include<stdio.h>
@@ -17,17 +18,18 @@ int main()
     printf("%d sample of Gamma(%d,%.3f) are \n",n,alpha,lambda);
 
     for(i=0;i<n;i++)
-	{ 
+	{
             gamma=0;
             for(j=0;j<alpha;j++)
             {
                 gamma+=-log(rand()/(float)RAND_MAX )/lambda;
             }
-		  
-		 /*-log X /lambda where x is uniform distribution 
-		 is exponetial distribution with parameter lambda 
+
+		 /*-log X /lambda where x is uniform distribution
+		 is exponetial distribution with parameter lambda
          sum of alpha exponential distribution is gamma distribution.  */
 			printf("%.3f ",gamma);
 	}
+  return 0;
 
 }

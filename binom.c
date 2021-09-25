@@ -1,7 +1,8 @@
 /*
 Pranav Kumar Anupam
 2019/14/059
-Practical # 
+Practical # 15
+Generating sample of Binomial Distribution
 
 */
 #include<stdio.h>
@@ -18,7 +19,7 @@ int main()
 	for(i=0;i<N;i++)
 	{ int x=0;
 		for(j=0;j<n;j++)
-		{  
+		{
 		/*	printf("%f ",pvalue); */
 			if(p<(rand()/(float)RAND_MAX))
 			x++;
@@ -28,5 +29,5 @@ int main()
 	printf("\n");
 	return 0;
 
-	
+
 }
