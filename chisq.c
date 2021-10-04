@@ -26,7 +26,7 @@ int main()
     }
     printf("%.3f ",(sum-6)*(sum-6));
   }
-
+printf("\n");
   return 0;
 
 }

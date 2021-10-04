@@ -6,6 +6,7 @@ Printing N random sample of Gamma distribution where alpha is integer.
 
 */
 #include<stdio.h>
+#include<math.h>
 #include<stdlib.h>
 int main()
 {
@@ -30,6 +31,7 @@ int main()
          sum of alpha exponential distribution is gamma distribution.  */
 			printf("%.3f ",gamma);
 	}
+    printf("\n");
   return 0;
 
 }

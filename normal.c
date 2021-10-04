@@ -25,6 +25,9 @@ int main()
       sum+=rand()/(float)RAND_MAX;
     }
     printf("%.3f ",mu+(sum-6)*sigma );
+  
   }
+  printf("\n");
+
   return 0;
 }

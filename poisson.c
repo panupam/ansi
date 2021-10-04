@@ -14,7 +14,7 @@ int main()
 	float p,l,u,mu;
 	printf("Enter no of sample to be generated: " );
 	scanf("%d", &n);
-	printf("Enter mu of poission distribution: ");
+	printf("Enter mu (parameter) of poission distribution: ");
 	scanf("%f",&mu );
 	l=exp(-mu);
 	for(i=0;i<n;i++)
@@ -30,5 +30,6 @@ int main()
 		} while(p>l);
 		printf("%d ",k-1);
 	}
+	printf("\n");
 	return 0;
 }

@@ -6,6 +6,7 @@ Printing N sample of Beta Distribution with both integer parameter
 */
 
 #include<stdio.h>
+#include<math.h>
 #include<stdlib.h>
 int main()
 {
@@ -13,7 +14,7 @@ int main()
     float lambda=1,gamma1,gamma2;
     printf("Enter no of sample to be generated: ");
     scanf("%d",&n);
-    printf("Enter alpha(positive int) and lambda of gamma distribution :");
+    printf("Enter alpha  and beta (both positive int)of Beta distribution :");
     scanf("%d%d",&alpha,&beta);
     printf("%d sample of Beta(%d,%d) are \n",n,alpha,beta);
 
@@ -28,17 +29,18 @@ int main()
             gamma1=0;
             for(j=0;j<alpha;j++)
             {
-                gamma1+=-log(rand()/(float)RAND_MAX )/lambda;
+                gamma1+= -log(rand()/(float)RAND_MAX )/lambda;
             }
             gamma2=0;
             for(j=0;j<beta;j++)
             {
-                gamma2+=-log(rand()/(float)RAND_MAX )/lambda;
+                gamma2+= -log(rand()/(float)RAND_MAX )/lambda;
             }
 
 
 			printf("%.3f ",gamma1/(gamma1+gamma2));
 	}
+    printf("\n");
   return 0;
 
 }

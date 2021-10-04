@@ -37,5 +37,6 @@ int main()
       population[j]=population[j+1];
     }
   }
+  printf("\n");
   return 0;
 }

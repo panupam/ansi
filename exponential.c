@@ -28,5 +28,6 @@ int main()
 			printf("%.4lf ",exp);
 		}
 	}
+	printf("\n");
 	return 0;
 }
