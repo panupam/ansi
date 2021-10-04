@@ -27,8 +27,8 @@ int main()
 			u=rand()/(float)RAND_MAX;
 			p=p*u;
 
-		} while(p>L);
-		printf("%d ",k-1));
+		} while(p>l);
+		printf("%d ",k-1);
 	}
 	return 0;
 }

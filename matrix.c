@@ -1,10 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
+struct Mat{
+	float data[25][25];
+	int m,n;
+}
 void mprint(float ***);
 int main()
 {
     int n1,m1,n2,m2,i,j;
-    float **mat1,**mat2,**mat_prod,**mat_trans,trace_value;
+     **mat1,**mat2,**mat_prod,**mat_trans,trace_value;
     FILE *fin,*fout;
 
     /*fin=fopen("input.txt","r");

@@ -7,6 +7,7 @@ Generating Normal Distribution from uniform distribution
 
 #include <stdio.h>
 #include <math.h>
+#include<stdlib.h>
 
 int main()
 {
