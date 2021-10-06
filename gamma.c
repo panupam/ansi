@@ -11,7 +11,8 @@ Printing N random sample of Gamma distribution where alpha is integer.
 int main()
 {
     int i,alpha,j,n;
-    float lambda,gamma;
+    float lambda,gamma,sum=0,sqsum=0;
+    float mean,var;
     printf("Enter no of sample to be generated: ");
     scanf("%d",&n);
     printf("Enter alpha(positive int) and lambda of gamma distribution :");
@@ -30,7 +31,13 @@ int main()
 		 is exponetial distribution with parameter lambda
          sum of alpha exponential distribution is gamma distribution.  */
 			printf("%.3f ",gamma);
+            sum+=gamma;
+            sqsum+=gamma*gamma;
 	}
+    
+	mean=sum/n;
+	var=sqsum/n-mean*mean;
+	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
     printf("\n");
   return 0;
 

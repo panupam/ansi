@@ -1,8 +1,8 @@
 /*
 Pranav Kumar Anupam
 2019/14/059
-Practical # 8
-Matrix Add Subtract
+Practical # 9
+Matrix Addition and Subtraction
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -19,7 +19,7 @@ int main()
     float mat1[dim][dim],mat2[dim][dim],mat_add[dim][dim],mat_sub[dim][dim];
     FILE *fin;
     fin=fopen("input.txt","r");
-    /*fout=fopen("output.txt","w");*/
+    
     fscanf(fin,"%d%d",&m,&n);
    
 

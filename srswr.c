@@ -10,7 +10,7 @@ Sampling from Population(integer) using SRSWR
 int main()
 {
   int n,N,*population,i,index;
-srand(5);
+  srand(5);  /*Setting Seeds*/
 
   printf("Enter no of Sample to be generated: " );
   scanf("%d",&n);

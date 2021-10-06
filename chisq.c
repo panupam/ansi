@@ -11,7 +11,8 @@ Generating N random sample of chi sq distribution
 int main()
 {
   int n,i,j,df;
-  float sum;
+  float sample,sum=0,sqsum=0;
+  float mean,var;
   printf("Enter no of random sample to be generated: " );
   scanf("%d",&n );
   printf("Enter Degree of Freedom for chi sq distribution: " );
@@ -19,14 +20,21 @@ int main()
   printf("\n%d sample of Chi-sq distribution with %d df are\n",n,df );
   for(i=0;i<n;i++)
   {
-    sum=0;
+    sample=0;
     for(j=0;j<12;j++)
     {
-      sum+=rand()/(float)RAND_MAX;
+      sample+=rand()/(float)RAND_MAX;
     }
-    printf("%.3f ",(sum-6)*(sum-6));
+    sample=(sample-6)*(sample-6);
+    printf("%.3f ",sample);
+    sum+=sample;
+    sqsum+=sample*sample;
   }
-printf("\n");
+  
+	mean=sum/n;
+	var=sqsum/n-mean*mean;
+	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
+  printf("\n");
   return 0;
 
 }

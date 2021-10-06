@@ -5,25 +5,21 @@ Practical #
 
 */
 #include<stdio.h>
-#include<string.h>
+#include<stdlib.h>
+#include<limits.h>
+int fact(int n)
+{
+	if(n==0)
+	return 1;
+	
+	return n*fact(n-1);
+}
 int main()
 {
     int i;
-   
-    char *arr="New Giks";
-   char  *ptr[2]={"Hello Officer Who are you","HEllo"};
-    /*printf("%d",-23/4);*/
-	char s[100];
-	s=gets();
-	
-	printf("%s",s);
-	printf("%s",arr);
-    for(i=0;i<25;i++)
-    {
-        static int k=25;
-        printf("%d ",k--);
-       
-    }
+    for(i=0;i<10;i++)
+    printf("%d ",fact(i));
+    
     return 0;
     
 }

@@ -11,7 +11,8 @@ Printing N sample of Beta Distribution with both integer parameter
 int main()
 {
     int i,alpha,beta,j,n;
-    float lambda=1,gamma1,gamma2;
+    float lambda=1,gamma1,gamma2,sum=0,sqsum=0,sample;
+    float mean,var;
     printf("Enter no of sample to be generated: ");
     scanf("%d",&n);
     printf("Enter alpha  and beta (both positive int)of Beta distribution :");
@@ -21,11 +22,11 @@ int main()
     for(i=0;i<n;i++)
 	{
     /*-log X /lambda where x is uniform distribution
-   is exponetial distribution with parameter lambda
+        is exponetial distribution with parameter lambda
        sum of alpha exponential distribution is gamma distribution.
       if  two independent gamma distribution X1~ gamma(alpha,1), X2~ gamma(beta,1)
-  if  Y=  X1/(X1+X2) then  Y~Beta(alpha,beta)
-         */
+        if  Y=  X1/(X1+X2) then  Y~Beta(alpha,beta)
+    */
             gamma1=0;
             for(j=0;j<alpha;j++)
             {
@@ -37,9 +38,16 @@ int main()
                 gamma2+= -log(rand()/(float)RAND_MAX )/lambda;
             }
 
+            sample=gamma1/(gamma1+gamma2);
+			printf("%.3f ",sample);
+            sum+=sample;
+            sqsum+=sample*sample;
 
-			printf("%.3f ",gamma1/(gamma1+gamma2));
 	}
+    
+	mean=sum/n;
+	var=sqsum/n-mean*mean;
+	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
     printf("\n");
   return 0;
 
