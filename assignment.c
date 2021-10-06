@@ -15,7 +15,7 @@ int main()
 	int n=100,i,k,sample,expected[10];
 	float p,l,u,mu=1.25;
 	int freq[10]={0,0,0,0,0,0,0,0,0,0};
-	float chi_tab=
+	float chi_tab=7.8 , chi_calc=0;
 	
 	
 	l=exp(-mu);
@@ -70,8 +70,15 @@ int main()
 	printf("%d\t%d\t%d\n",i,freq[i],expected[i]);
 
 	/* Chi Sq test */
-	
-	
+	for(i=0;i<5;i++){
+		float temp=expected[i]-freq[i];
+		chi_calc+=temp*temp/expected[i];
+	}
+	printf("\nCalculated Value of Chi square is %.3f",chi_calc);
+	if(chi_calc<chi_tab)
+	printf("H0 is accepted; ");
+	else 
+	printf("H0 is rejected; ");
 
 
     return 0;
