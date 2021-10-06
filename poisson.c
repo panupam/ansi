@@ -13,6 +13,7 @@ int main()
 	int n,i,k,sum=0,sqsum=0,sample;
 	float p,l,u,mu;
 	float mean,var;
+	/*srand(100);*/
 	printf("Enter no of sample to be generated: " );
 	scanf("%d", &n);
 	printf("Enter mu (parameter) of poission distribution: ");
@@ -46,8 +47,8 @@ int main()
 
 
 	}
-	mean=sum/n;
-	var=sqsum/n-mean*mean;
+	mean=sum/(float)n;
+	var=sqsum/(float)n-mean*mean;
 	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
 	printf("Theoretical Mean %.3f and Theoretical Variance %.3f",mu,mu);
 	printf("\n");

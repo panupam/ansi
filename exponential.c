@@ -15,7 +15,7 @@ int main()
 	printf("Enter No of Sample to be generated: ");
 	scanf("%d",&n);
 	printf("Enter lembda value: ");
-	scanf("%lf",&lambda);
+	scanf("%f",&lambda);
 	if(lambda<=0)
 	printf("Error! only positive value of lembda is acceptable\n");
 	else
@@ -34,8 +34,8 @@ int main()
 	
 	mean=sum/n;
 	var=sqsum/n-mean*mean;
-	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
-	printf("Theoretical Mean %.3f and Theoretical Variance %.3f",1/lambda,1/(lambda*lambda));
+	printf("\n\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
+	printf("\nTheoretical Mean %.3f and Theoretical Variance %.3f",1/lambda,1/(lambda*lambda));
 	printf("\n");
 	return 0;
 }

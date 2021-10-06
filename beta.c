@@ -47,7 +47,8 @@ int main()
     
 	mean=sum/n;
 	var=sqsum/n-mean*mean;
-	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
+	printf("\n\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
+    printf("\nTheoretical Mean is %.3f and Theoretical variance is %.3f ",(float)alpha/(alpha+beta),(float)alpha*beta/((alpha+beta+1)*(alpha+beta)*(alpha+beta)));
     printf("\n");
   return 0;
 

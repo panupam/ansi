@@ -16,9 +16,13 @@ int fact(int n)
 }
 int main()
 {
-    int i;
-    for(i=0;i<10;i++)
-    printf("%d ",fact(i));
+    int sample[100],i,freqency[8]={0};
+    for(i=0;i<100;i++)
+    {
+        freqency[sample[i]]++;
+    }
+    for(i=0;i<8;i++)
+    printf("%d %d\n",i,freqency[i]);
     
     return 0;
     

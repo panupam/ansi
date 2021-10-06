@@ -1,3 +1,10 @@
+/*
+ Pranav Kumar Anupam
+ 2019/14/059
+ Programming Assignment: 
+ Generation of 100 Poisson Distribtion with parameter 1.25
+ and Applying Goodness of fit test
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -15,7 +22,7 @@ int main()
 	int n=100,i,k,sample,expected[10];
 	float p,l,u,mu=1.25;
 	int freq[10]={0,0,0,0,0,0,0,0,0,0};
-	float chi_tab=7.8 , chi_calc=0;
+	float chi_tab , chi_calc=0;
 	
 	
 	l=exp(-mu);
@@ -57,7 +64,8 @@ int main()
 	}
 
 	/* As expected Frequncey can't be smaller than 4(there is disagreement 
-	on what should be smallest frequency between 3,4 or 5 )*/
+	on what should be smallest frequency between 3,4 or 5 )
+	I am merging all i after 4 in 4 */
 	for(i=5;i<10;i++)
 	{
 		freq[4]+=freq[i];
@@ -74,11 +82,21 @@ int main()
 		float temp=expected[i]-freq[i];
 		chi_calc+=temp*temp/expected[i];
 	}
-	printf("\nCalculated Value of Chi square is %.3f",chi_calc);
+	/*Degree of freedom is 4; as total number of class is after consolidation is 5 
+	and we are not estimating any parameter of distribution. Hence df=5-1
+	*/
+	chi_tab=9.488; /* alpha 5%*/
+	printf("\nCalculated Value of Chi square is %.3f at \n",chi_calc);
 	if(chi_calc<chi_tab)
-	printf("H0 is accepted; ");
+	printf("\nH0 is accepted; i.e Sample follow Pois(%.3f) at alpha .05  \n",mu);
 	else 
-	printf("H0 is rejected; ");
+	printf("\nH0 is rejected; i.e Sample doesnot follow Pois(%.3f)  at alpha .05 \n",mu);
+
+	chi_tab=7.779;
+	if(chi_calc<chi_tab)
+	printf("\nH0 is accepted; i.e Sample follow Pois(%.3f) at alpha .10  \n",mu);
+	else 
+	printf("\nH0 is rejected; i.e Sample doesnot follow Pois(%.3f)  at alpha .10 \n",mu);
 
 
     return 0;
