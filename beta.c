@@ -2,7 +2,7 @@
 Pranav Kumar Anupam
 2019/14/059
 Practical # 12
-Printing N sample of Beta Distribution with both integer parameter
+Printing N sample of Beta Distribution(Type I) with both integer parameter
 */
 
 #include<stdio.h>
