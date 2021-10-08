@@ -30,7 +30,7 @@ int main()
       sample+=(x-6)*(x-6);
     
     }
-    printf("%.3f ",sample);
+    printf("%7.3f",sample);
     sum+=sample;
     sqsum+=sample*sample;
   }

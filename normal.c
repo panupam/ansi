@@ -27,7 +27,7 @@ int main()
       sample+=rand()/(float)RAND_MAX;
     }
     sample=mu+(sample-6)*sigma ;
-    printf("%.3f ",sample);
+    printf(" %6.3f",sample);
     sum+=sample;
     sqsum+=sample*sample;
   
@@ -36,7 +36,7 @@ int main()
   
 	mean=sum/n;
 	var=sqsum/n-mean*mean;
-	printf("\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
+	printf("\n\nCalculated Mean is %.3f and Calculated Variance is %.3f\n",mean,var);
   printf("\nTheoretical Mean %.3f and Theoretical Variance %.3f\n",mu,sigma*sigma);
 
 
